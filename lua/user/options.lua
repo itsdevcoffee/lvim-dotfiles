@@ -1,3 +1,6 @@
+vim.cmd('set number relativenumber')
+vim.cmd('set nu rnu')
+
 local options = {
   backup = false, -- creates a backup file
   clipboard = "unnamedplus", -- allows neovim to access the system clipboard

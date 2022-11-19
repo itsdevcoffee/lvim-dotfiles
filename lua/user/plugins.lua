@@ -3,43 +3,6 @@ local theme = require('user.theme')
 lvim.plugins = {
   theme,
   {
-    'EdenEast/nightfox.nvim',
-    config = function()
-
-      -- bold
-      -- underline
-      -- undercurl	curly underline
-      -- underdouble	double underline
-      -- underdotted	dotted underline
-      -- underdashed	dashed underline
-      -- strikethrough
-      -- reverse
-      -- inverse		same as reverse
-      -- italic
-      -- standout
-      -- nocombine	override attributes instead of combining them
-      -- NONE		no attributes used (used to reset it)
-
-      require('nightfox').setup({
-        options = {
-          transparent = true,
-          terminal_colors = true,
-          dim_inactive = true,
-          module_default = true,
-          styles = {
-            comments = "NONE",
-            conditionals = "italic",
-            functions = "bold",
-            keywords = "italic",
-            numbers = "bold",
-            operators = "NONE"
-
-          }
-        }
-      })
-    end
-  },
-  {
 
     'karb94/neoscroll.nvim',
     config = function()
@@ -168,7 +131,6 @@ lvim.plugins = {
   { 'j-hui/fidget.nvim' },
   { "ghillb/cybu.nvim" },
   { 'is0n/jaq-nvim' },
-  { 'nvim-lua/plenary.nvim' },
   {
     'folke/todo-comments.nvim',
     requires = {

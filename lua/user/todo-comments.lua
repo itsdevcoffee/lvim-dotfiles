@@ -1,8 +1,3 @@
-local status_ok, todo_comments = pcall(require, "todo-comments")
-if not status_ok then
-  return
-end
-
 local icons = require "user.icons"
 local error_red = "#F44747"
 local warning_orange = "#ff8800"
@@ -11,7 +6,7 @@ local hint_blue = "#4FC1FF"
 local perf_purple = "#7C3AED"
 local note_green = '#10B981'
 
-todo_comments.setup {
+require('todo-comments').setup({
   signs = true, -- show icons in the signs column
   sign_priority = 8, -- sign priority
   -- keywords recognized as todo comments
@@ -66,4 +61,4 @@ todo_comments.setup {
     pattern = [[\b(KEYWORDS):]], -- ripgrep regex
     -- pattern = [[\b(KEYWORDS)\b]], -- match without the extra colon. You'll likely get false positives
   },
-}
+})
