@@ -1,0 +1,83 @@
+-- { 'lunarvim/darkplus.nvim' },
+-- { 'sainnhe/everforest' },
+-- { 'daschw/leaf.nvim' },
+-- { 'catppuccin/nvim', as = 'catppuccin' },
+-- { 'bluz71/vim-nightfly-guicolors' },
+-- { 'rebelot/kanagawa.nvim' },
+-- { 'ayu-theme/ayu-vim' },
+-- { 'rafamadriz/neon' },
+-- {
+--   'maxmx03/FluoroMachine.nvim',
+--   config = function()
+--     local success, fluoromachine = pcall(require, 'fluoromachine')
+
+--     if not success then
+--       return
+--     end
+
+--     fluoromachine.setup {
+--       transparent = true,
+--       brightness = 0.01,
+--     }
+--   end
+-- },
+-- {
+--   'lunarvim/synthwave84.nvim',
+--   config = function()
+--     require 'synthwave84'.setup({
+--       glow = {
+--         error_msg = true,
+--         type2 = true,
+--         func = true,
+--         keyword = true,
+--         operator = true,
+--         buffer_current_target = true,
+--         buffer_visible_target = true,
+--         buffer_inactive_target = true,
+--       }
+--     })
+
+--   end
+-- },
+-- {
+--   'lukas-reineke/indent-blankline.nvim',
+--   config = function()
+--     require('indent-blankline.nvim').setup {}
+--   end
+-- },
+-- {
+--   'Tsuzat/NeoSolarized.nvim',
+--   config = function()
+--   local ok_status, NeoSolarized = pcall(require, "NeoSolarized")
+
+--   if not ok_status then
+--     return
+--   end
+
+--   NeoSolarized.setup {
+--     style = "dark", -- "dark" or "light"
+--     transparent = true, -- true/false
+--     terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
+--     enable_italics = true, -- Italics for different hightlight groups (eg. Statement, Condition, Comment, Include, etc.)
+--     styles = {
+--       -- Style for different style groups
+--       comments = { italic = true },
+--       keywords = { italic = true },
+--       functions = { bold = true },
+--       variables = {},
+--       string = { italic = true },
+--       underline = false, -- true/false; for global underline
+--       undercurl = false, -- true/false; for global undercurl
+--     },
+--   }
+
+--   vim.cmd [[
+--     try
+--       colorscheme NeoSolarized
+--     catch /^Vim\%((\a\+)\)\=:E18o
+--       colorscheme default
+--       set background=dark
+--     endtry
+--   ]]
+-- end
+-- },
