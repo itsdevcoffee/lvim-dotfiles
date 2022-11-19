@@ -1,111 +1,7 @@
--- General
-lvim.log.level = "warn"
-lvim.format_on_save = true
--- lvim.colorscheme = "tokyonight-storm"
--- require('tokyonight').setup({
---   transparent = true,
---   terminal_colors = true,
---   styles = {
---     sidebars = "transparent",
---     floats = "transparent"
---   },
---   lualine_bold = true
--- })
-
--- vim.g.neon_style = "doom"
--- vim.g.neon_transparent = true
--- vim.g.neon_italic_comment = true
--- vim.g.neon_bold = true
--- lvim.colorscheme = 'neon'
--- lvim.builtin.lualine.options.theme = 'neon'
-
--- lvim.builtin.lualine.options.theme = 'nightfly'
--- vim.g.nightflyTransparent = true
--- vim.g.nightflyCursorColor = true
-
-vim.o.termguicolors = true
-vim.opt.termguicolors = true
-
-vim.cmd([[
-  if has('termguicolors')
-    set termguicolors
-  endif
-]])
-
-
-lvim.colorscheme = 'carbonfox'
-
-
-
--- local success, fluoromachine = pcall(require, 'fluoromachine')
-
--- if not success then
---   return
--- end
-
--- fluoromachine.setup {
---   transparent = true,
---   brightness = 0.014,
--- }
-
--- vim.g.everforest_better_performance = 1
--- vim.g.everforest_background = 'hard'
--- vim.cmd([[
---   set background=dark
--- ]])
--- lvim.colorscheme = 'everforest'
--- lvim.colorscheme = 'leaf'
-
-
-
-
--- vim.g.nightflyTransparent = true
--- vim.g.nightflyTerminalColors = true
--- vim.g.nightflyUndercurls = true
--- vim.g.nightflyWinSeparator = 2
--- vim.opt.fillchars = { horiz = '━', horizup = '┻', horizdown = '┳', vert = '┃', vertleft = '┫', vertright = '┣',
---   verthoriz = '╋', }
--- lvim.colorscheme = 'nightfly'
-
--- lvim.colorscheme = 'tokyonight-storm'
--- require('tokyonight').setup({
---   transparent = true,
---   terminal_colors = true,
---   theme = 'tokyonight-storm',
---   styles = {
---     sidebars = "transparent",
---     floats = "transparent"
---   },
---   lualine_bold = true
--- })
-
--- require('kanagawa').setup({
---   undercurl = true, -- enable undercurls
---   commentStyle = { italic = true },
---   functionStyle = {},
---   keywordStyle = { italic = true },
---   statementStyle = { bold = true },
---   typeStyle = {},
---   variablebuiltinStyle = { italic = true },
---   specialReturn = true, -- special highlight for the return keyword
---   specialException = true, -- special highlight for exception handling keywords
---   transparent = false, -- do not set background color
---   dimInactive = false, -- dim inactive window `:h hl-NormalNC`
---   globalStatus = false, -- adjust window separators highlight for laststatus=3
---   terminalColors = true, -- define vim.g.terminal_color_{0,17}
---   colors = {},
---   overrides = {},
---   theme = "default" -- Load "default" theme or the experimental "light" theme
--- })
--- vim.g.neon_style = 'dark'
--- vim.g.neon_transparent = true
--- vim.g.neon_bold = true
-
-
-lvim.leader = "space"
-lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 -- Change Telescope navigation to use j and k for navigation and n and p for history in both input and normal mode.
 -- we use protected-mode (pcall) just in case the plugin wasn't loaded yet.
+--
+
 local _, actions = pcall(require, "telescope.actions")
 lvim.builtin.telescope.defaults.mappings = {
   -- for input mode
@@ -182,34 +78,9 @@ end, { remap = true })
 
 lvim.builtin.which_key.mappings["<Space>"] = { "<cmd>ToggleTerm<CR>", "Toggle Terminal" }
 
-lvim.builtin.treesitter.autotag.enabled = true
-
--- Keybindings END
-
--- TODO: User Config for predefined plugins
--- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
-lvim.builtin.alpha.active = true
-lvim.builtin.alpha.mode = "dashboard"
-lvim.builtin.terminal.active = true
-lvim.builtin.terminal.shell = 'zsh'
-lvim.builtin.nvimtree.setup.view.side = "left"
-lvim.builtin.nvimtree.setup.view.width = 26
-lvim.builtin.nvimtree.setup.renderer.icons.show.git = true
-vim.opt.smartindent = true
-vim.o.smartindent = true
-
-lvim.builtin.alpha.active = true
-lvim.builtin.alpha.mode = "dashboard"
-
--- lvim.builtin.notify.active = true
--- lvim.builtin.notify.active = true
--- lvim.builtin.notify.opts.stages = "slide" -- fade, static, fade_in_slide_out
--- lvim.builtin.notify.opts.timeout = 3000
-
-
-lvim.builtin.bufferline.active = true
-lvim.builtin.bufferline.options.numbers = "ordinal"
-lvim.builtin.bufferline.options.indicator_icon = nil;
+-- lvim.builtin.bufferline.active = true
+-- lvim.builtin.bufferline.options.numbers = "none"
+-- lvim.builtin.bufferline.options.indicator_icon = nil;
 
 
 lvim.builtin.nvimtree.setup.view.side = "left"
@@ -217,7 +88,6 @@ lvim.builtin.nvimtree.show_icons = 1
 
 -- vim.cmd('set termguicolors')
 -- vim.cmd('set t_Co=256')
-
 
 lvim.builtin.lualine.active = true
 lvim.builtin.lualine.style = "lvim"
@@ -413,7 +283,15 @@ code_actions.setup {
     filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
   }
 }
+-- TODO: something
 
 -- Load modules
+reload "user.icons"
+reload "user.config"
+reload "user.options"
 reload "user.plugins"
+reload "user.fidget"
+reload "user.jaq"
+-- reload "user.todo-comments"
+reload "user.cybu"
 reload "user.auto-commands"

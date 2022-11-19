@@ -163,5 +163,16 @@ lvim.plugins = {
   {
     'styled-components/vim-styled-components',
     branch = 'main',
-  }
+  },
+  { 'hrsh7th/cmp-emoji' },
+  { 'j-hui/fidget.nvim' },
+  { "ghillb/cybu.nvim" },
+  { 'is0n/jaq-nvim' },
+  { 'nvim-lua/plenary.nvim' },
+  {
+    'folke/todo-comments.nvim',
+    requires = {
+      "nvim-lua/plenary.nvim"
+    }
+  },
 }
