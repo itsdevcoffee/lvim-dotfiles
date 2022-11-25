@@ -1,7 +1,13 @@
 local theme = {
+  -- 'NLKNguyen/papercolor-theme',
+  -- config = function()
+  --   lvim.builtin.lualine.options.theme = 'PaperColor'
+  --   vim.cmd [[:set background=dark]]
+
+  -- end
+
   'EdenEast/nightfox.nvim',
   config = function()
-
     -- bold
     -- underline
     -- undercurl	curly underline

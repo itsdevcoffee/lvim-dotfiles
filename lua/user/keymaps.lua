@@ -1,7 +1,7 @@
 M = {}
 lvim.leader = "space"
 
--- local opts = { noremap = true, silent = true }
+local opts = { noremap = true, silent = true }
 local keymap = vim.keymap.set
 
 -- place this in one of your configuration file(s)
@@ -25,5 +25,8 @@ end, { remap = true })
 -- keymap("n", "<C-Down>", ":resize +2<CR>", opts)
 -- keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 -- keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+
+keymap("n", "<C-Up>", "<C-b>", opts)
+keymap("n", "<C-Down>", "<C-f>", opts)
 
 return M

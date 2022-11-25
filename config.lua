@@ -1,6 +1,7 @@
 -- Load modules
 reload "user.plugins"
 reload "user.options"
+reload "user.neovide"
 reload "user.config"
 reload "user.keymaps"
 reload "user.auto-commands"
