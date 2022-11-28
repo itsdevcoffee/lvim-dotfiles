@@ -28,5 +28,6 @@ end, { remap = true })
 
 keymap("n", "<C-Up>", "<C-b>", opts)
 keymap("n", "<C-Down>", "<C-f>", opts)
+keymap("n", "<c-m>", "<s-m>", opts)
 
 return M

@@ -4,6 +4,7 @@ lvim.log.level = "warn"
 lvim.format_on_save = true
 lvim.leader = "space"
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
+lvim.lsp.diagnostics.float.focusable = true
 
 -- Builtins
 lvim.builtin.alpha.active = true
