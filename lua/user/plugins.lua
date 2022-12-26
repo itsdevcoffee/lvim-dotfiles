@@ -2,9 +2,9 @@ local theme = require('user.theme')
 
 lvim.plugins = {
   theme,
-  {
-    'opalmay/vim-smoothie'
-  },
+  -- {
+  --   'opalmay/vim-smoothie'
+  -- },
   -- {
   --   'karb94/neoscroll.nvim',
   --   config = function()

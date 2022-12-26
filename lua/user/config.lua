@@ -57,6 +57,15 @@ lvim.builtin.treesitter.ensure_installed = {
   "yaml",
   "solidity"
 }
+-- lvim.lsp.installer.setup.ensure_installed = { 'solidity' }
+-- vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { 'solc' })
+-- require 'lspconfig'.solc.setup {
+--   cmd = { 'solc', '--lsp' },
+--   filestypes = { 'solidity' },
+--   root_dir = { 'hardhat.config.*', '.git' },
+-- }
+-- vim.cmd [[au BufRead,BufNewFile *.sol set filetype=solidity]]
+
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = false
 lvim.builtin.telescope.defaults.file_ignore_patterns = {

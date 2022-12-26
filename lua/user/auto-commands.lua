@@ -6,11 +6,17 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
+
 -- Adds tab-width of 4 automatically on save
 vim.api.nvim_create_autocmd('BufEnter', {
   pattern = { '*.lua', '*.ts', '*.js', '*.jsx', '*.tsx', '*.ts', '*.json' },
   -- command = 'setlocal ts=4 sw=4'
   command = 'setlocal smartindent expandtab tabstop=2 shiftwidth=2'
+})
+
+vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, {
+  pattern = { '*.sol' },
+  command = 'set filetype=solidity'
 })
 
 vim.api.nvim_create_autocmd('BufEnter', {
@@ -50,16 +56,16 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
   end,
 })
 
-vim.api.nvim_create_autocmd({ "FileType" }, {
-  pattern = { "Jaq" },
-  callback = function()
-    vim.cmd [[
-      nnoremap <silent> <buffer> <m-r> :close<CR>
-      " nnoremap <silent> <buffer> <m-r> <NOP> 
-      set nobuflisted 
-    ]]
-  end,
-})
+-- vim.api.nvim_create_autocmd({ "FileType" }, {
+--   pattern = { "Jaq" },
+--   callback = function()
+--     vim.cmd [[
+--       nnoremap <silent> <buffer> <m-r> :close<CR>
+--       " nnoremap <silent> <buffer> <m-r> <NOP>
+--       set nobuflisted
+--     ]]
+--   end,
+-- })
 
 vim.api.nvim_create_autocmd({ "BufEnter" }, {
   pattern = { "" },
